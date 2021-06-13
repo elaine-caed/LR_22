@@ -26,19 +26,18 @@ namespace Example5
             }
             catch (IndexOutOfRangeException e)
             {
-                MyLogger("Out of range", e.Message);
+                Console.WriteLine("Out of range");
+                Console.WriteLine(e.Message);
             }
             catch (ArgumentException e)
             {
-                MyLogger("Can't copy arr to mas", e.Message);
-            }
-            catch (Exception e) when (mas[0] == 0)
-            {
-                MyLogger("Divition By Zero", e.Message);
+                Console.WriteLine("Can't copy arr to mas");
+                Console.WriteLine(e.Message);
             }
             catch (Exception e)
             {
-                MyLogger("Some other exception", e.Message);
+                Console.WriteLine("Some other exception");
+                Console.WriteLine(e.Message);
             }
             PrintArray(mas);
         }
